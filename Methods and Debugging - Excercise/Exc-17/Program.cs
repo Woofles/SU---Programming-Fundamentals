@@ -9,11 +9,12 @@ public class SequenceOfCommands_broken
     {
         int sizeOfArray = int.Parse(Console.ReadLine());
 
-        long[] array = Console.ReadLine()
+        long[] inputArray = Console.ReadLine()
             .Split(ArgumentsDelimiter)
             .Select(long.Parse)
             .ToArray();
-
+        long[] array = inputArray.Take(sizeOfArray).ToArray(); // reducing the input to sizeOfArray number of elements
+        //
         string command = Console.ReadLine();
 
         while (!command.Equals("stop"))

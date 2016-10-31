@@ -12,27 +12,25 @@ namespace Exc_03
     {
         static void Main(string[] args)
         {
-            int input = int.Parse(Console.ReadLine());
+            long input = long.Parse(Console.ReadLine());
             string name = LastDigitName(input);
             Console.WriteLine(name);
         }
 
-        static string LastDigitName(int input)
+        static string LastDigitName(long input)
         {
-            int digit = input % 10;
-            switch (digit)
-            {
-                case 1: return "one"; break;
-                case 2: return "two"; break;
-                case 3: return "three"; break;
-                case 4: return "four"; break;
-                case 5: return "five"; break;
-                case 6: return "six"; break;
-                case 7: return "seven"; break;
-                case 8: return "eight"; break;
-                case 9: return "nine"; break;
-                default: return "zero"; break;
-            }
+            long digit = Math.Abs(input) % 10;
+            if (digit == 1) { return "one"; }
+            else if (digit == 2) { return "two"; }
+            else if (digit == 3) { return "three"; }
+            else if (digit == 4) { return "four"; }
+            else if (digit == 5) { return "five"; }
+            else if (digit == 6) { return "six"; }
+            else if (digit == 7) { return "seven"; }
+            else if (digit == 8) { return "eigth"; }
+            else if (digit == 9) { return "nine"; }
+            else if (digit ==0) { return "zero"; }
+            return "";
         }
     }
 }
