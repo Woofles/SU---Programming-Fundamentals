@@ -27,7 +27,7 @@ namespace Exc_3
         {
             for (int roll = (-input) + 1; roll < input; roll++)
             {
-                // it goes like 3-|-2|; 3-|1|; 3-|0|; 3-|1|; 3-|2|;
+                // it goes like 3-|-2|; 3-|-1|; 3-|0|; 3-|1|; 3-|2|;
                 // where 3 is the input and the N in |N| the correction number
                 // ... +1 for roll declaration can also be moved to PrintLine's input
                 PrintLine(input - Math.Abs(roll));
